@@ -5,6 +5,12 @@ terraform {
       version = "4.42.0"
     }
   }
+    backend "azurerm" {
+
+    storage_account_name = "riteshstg"                              
+    container_name       = "riteshcnt"                               
+    key                  = "tfstate"           
+  }
 }
 
 provider "azurerm" {
